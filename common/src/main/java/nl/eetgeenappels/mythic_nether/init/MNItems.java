@@ -1,0 +1,27 @@
+package nl.eetgeenappels.mythic_nether.init;
+
+import dev.architectury.registry.registries.DeferredRegister;
+import dev.architectury.registry.registries.RegistrySupplier;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import nl.eetgeenappels.mythic_nether.MythicNether;
+
+public class MNItems {
+    public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(MythicNether.MOD_ID, Registries.ITEM);
+
+    public static final RegistrySupplier<Item> SCULK_STEM = block(MNBlocks.SCULK_STEM);
+    public static final RegistrySupplier<Item> SCULK_LEAVES = block(MNBlocks.SCULK_LEAVES);
+    public static final RegistrySupplier<Item> BLACKSTONE_SHRUB = block(MNBlocks.BLACKSTONE_SHRUB);
+    public static final RegistrySupplier<Item> BONE_NYLIUM = block(MNBlocks.BONE_NYLIUM);
+
+    private static RegistrySupplier<Item> block(RegistrySupplier<Block> block) {
+        return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+    }
+
+    public static void register() {
+        REGISTRY.register();
+    }
+
+}

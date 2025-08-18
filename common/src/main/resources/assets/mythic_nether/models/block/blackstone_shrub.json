@@ -1,0 +1,41 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "mythic_nether:block/shrub_shaft",
+		"1": "mythic_nether:block/shrub_leaves",
+		"particle": "mythic_nether:block/shrub_leaves"
+	},
+	"elements": [
+		{
+			"name": "shaft",
+			"from": [7, 0, 7],
+			"to": [9, 6, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 12], "texture": "#0"},
+				"east": {"uv": [2, 0, 4, 12], "texture": "#0"},
+				"south": {"uv": [4, 0, 6, 12], "texture": "#0"},
+				"west": {"uv": [6, 0, 8, 12], "texture": "#0"},
+				"up": {"uv": [10, 2, 8, 0], "texture": "#0"},
+				"down": {"uv": [10, 2, 8, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "leaves",
+			"from": [2, 6, 2],
+			"to": [15, 15, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 6, 6]},
+			"faces": {
+				"north": {"uv": [3.25, 0, 6.5, 2.25], "texture": "#1"},
+				"east": {"uv": [3.25, 4.5, 6.25, 6.75], "texture": "#1"},
+				"south": {"uv": [3.25, 2.25, 6.5, 4.5], "texture": "#1"},
+				"west": {"uv": [0, 6, 3, 8.25], "texture": "#1"},
+				"up": {"uv": [3.25, 3, 0, 0], "texture": "#1"},
+				"down": {"uv": [3.25, 3, 0, 6], "texture": "#1"}
+			}
+		}
+	],
+	"render_type":"cutout"
+}

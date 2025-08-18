@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "mythic_nether",
+  "version": "${version}",
+  "name": "Mythic Nether",
+  "description": "",
+  "authors": [
+    ""
+  ],
+  "contact": {
+    "homepage": ""
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/mythic_nether/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "nl.eetgeenappels.mythic_nether.fabric.MysticNetherFabric"
+    ],
+    "client": [
+      "nl.eetgeenappels.mythic_nether.client.fabric.MysticNetherFabricClient"
+    ]
+  },
+  "mixins": [
+    "mythic_nether.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.2",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "architectury": ">=13.0.8",
+    "fabric-api": "*"
+  }
+}
