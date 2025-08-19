@@ -13,7 +13,7 @@ public class MNEntities {
     public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(MythicNether.MOD_ID, Registries.ENTITY_TYPE);
     public static final RegistrySupplier<EntityType<SculkyEntity>> SCULKY = REGISTRY.register("sculky",  () -> EntityType.Builder.of(SculkyEntity::new, MobCategory.MONSTER)
             .sized(0.6F, 0.8F)
-            .build(null)
+            .build("null")
     );
 
     public static void register() {
