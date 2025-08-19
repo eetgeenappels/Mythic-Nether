@@ -2,6 +2,7 @@ package nl.eetgeenappels.mythic_nether;
 
 import nl.eetgeenappels.mythic_nether.init.MNBlocks;
 import nl.eetgeenappels.mythic_nether.init.MNCreativeTab;
+import nl.eetgeenappels.mythic_nether.init.MNEntities;
 import nl.eetgeenappels.mythic_nether.init.MNItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,5 +15,6 @@ public final class MythicNether {
         MNBlocks.register();
         MNItems.register();
         MNCreativeTab.register();
+        MNEntities.register();
     }
 }

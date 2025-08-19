@@ -54,7 +54,7 @@
           }
         },
         {
-          "biome": "mythic_nether:bone_barrows",
+          "biome": "mythic_nether:boney_barrows",
           "parameters": {
             "temperature": 0,
             "humidity": -1,
@@ -250,7 +250,7 @@
                         "if_true": {
                           "type": "minecraft:biome",
                           "biome_is": [
-                            "mythic_nether:bone_barrows"
+                            "mythic_nether:boney_barrows"
                           ]
                         },
                         "then_run": {

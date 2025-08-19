@@ -10,15 +10,15 @@
   "contact": {
     "homepage": ""
   },
-  "license": "All-Rights-Reserved",
+  "license": "LGPL-v3",
   "icon": "assets/mythic_nether/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "nl.eetgeenappels.mythic_nether.fabric.MysticNetherFabric"
+      "nl.eetgeenappels.mythic_nether.fabric.MythicNetherFabric"
     ],
     "client": [
-      "nl.eetgeenappels.mythic_nether.client.fabric.MysticNetherFabricClient"
+      "nl.eetgeenappels.mythic_nether.client.fabric.MythicNetherFabricClient"
     ]
   },
   "mixins": [

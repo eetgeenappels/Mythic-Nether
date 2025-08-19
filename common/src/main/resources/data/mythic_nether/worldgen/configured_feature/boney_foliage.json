@@ -1,0 +1,91 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "weight": 30,
+                "data": {
+                  "Name": "mythic_nether:small_bone_pile"
+                }
+              },
+              {
+                "weight": 10,
+                "data": {
+                  "Name": "mythic_nether:large_bone_pile"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "mythic_nether:large_bone",
+                  "Properties": {
+                    "facing": "north",
+                    "leaning": "true"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "mythic_nether:large_bone",
+                  "Properties": {
+                    "facing": "south",
+                    "leaning": "true"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "mythic_nether:large_bone",
+                  "Properties": {
+                    "facing": "west",
+                    "leaning": "true"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "mythic_nether:large_bone",
+                  "Properties": {
+                    "facing": "east",
+                    "leaning": "true"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "mythic_nether:large_bone",
+                  "Properties": {
+                    "facing": "west",
+                    "leaning": "false"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        }
+      ]
+    },
+    "tries": 32,
+    "xz_spread": 7,
+    "y_spread": 3
+  }
+}

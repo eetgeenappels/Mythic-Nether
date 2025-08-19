@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,leaning=false": { "model": "mythic_nether:block/large_bone_standing" },
+    "facing=south,leaning=false": { "model": "mythic_nether:block/large_bone_standing", "y": 180 },
+    "facing=west,leaning=false":  { "model": "mythic_nether:block/large_bone_standing", "y": 270 },
+    "facing=east,leaning=false":  { "model": "mythic_nether:block/large_bone_standing", "y": 90 },
+
+    "facing=north,leaning=true":  { "model": "mythic_nether:block/large_bone_diagonal" },
+    "facing=south,leaning=true":  { "model": "mythic_nether:block/large_bone_diagonal", "y": 180 },
+    "facing=west,leaning=true":   { "model": "mythic_nether:block/large_bone_diagonal", "y": 270 },
+    "facing=east,leaning=true":   { "model": "mythic_nether:block/large_bone_diagonal", "y": 90 }
+  }
+}

@@ -37,6 +37,8 @@
     [
       "minecraft:fossil_lower"
     ],
-    []
+    [
+      "mythic_nether:boney_foliage"
+    ]
   ]
 }

@@ -14,11 +14,14 @@ public class MNCreativeTab {
             DeferredRegister.create(MythicNether.MOD_ID, Registries.CREATIVE_MODE_TAB);
 
     public static final DeferredSupplier<CreativeModeTab> MYTHIC_NETHER = REGISTRY.register("true_end", () ->
-            CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).title(Component.translatable("item_group.true_end.true_end")).icon(() -> new ItemStack(MNBlocks.SCULK_STEM.get())).displayItems((parameters, tabData) -> {
+            CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0).title(Component.literal("Mythic Nether")).icon(() -> new ItemStack(MNBlocks.SCULK_STEM.get())).displayItems((parameters, tabData) -> {
                 tabData.accept(MNItems.SCULK_STEM.get());
                 tabData.accept(MNItems.SCULK_LEAVES.get());
                 tabData.accept(MNItems.BLACKSTONE_SHRUB.get());
                 tabData.accept(MNItems.BONE_NYLIUM.get());
+                tabData.accept(MNItems.SMALL_BONE_PILE.get());
+                tabData.accept(MNItems.LARGE_BONE_PILE.get());
+                tabData.accept(MNItems.LARGE_BONE.get());
             }).build());
 
     public static void register() {
