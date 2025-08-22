@@ -22,7 +22,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class BlackstoneShrub extends BushBlock {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FEATURE =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(MythicNether.MOD_ID, "boney_foliage"));
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(MythicNether.MOD_ID, "blackstone_shrub_patch"));
 
     private static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D,
             12.0D, 8.0D, 12.0D);

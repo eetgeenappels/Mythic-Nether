@@ -1,0 +1,12 @@
+{
+  "feature": "mythic_nether:bone_marrow_blob",
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 5
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

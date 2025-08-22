@@ -18,6 +18,7 @@ public class MNItems {
     public static final RegistrySupplier<Item> SMALL_BONE_PILE = block(MNBlocks.SMALL_BONE_PILE);
     public static final RegistrySupplier<Item> LARGE_BONE_PILE = block(MNBlocks.LARGE_BONE_PILE);
     public static final RegistrySupplier<Item> LARGE_BONE = block(MNBlocks.LARGE_BONE);
+    public static final RegistrySupplier<Item> BONE_MARROW = block(MNBlocks.BONE_MARROW);
 
     private static RegistrySupplier<Item> block(RegistrySupplier<Block> block) {
         return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

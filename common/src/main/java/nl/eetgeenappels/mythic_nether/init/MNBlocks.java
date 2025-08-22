@@ -17,6 +17,7 @@ public class MNBlocks {
     public static final RegistrySupplier<Block> SMALL_BONE_PILE = REGISTRY.register("small_bone_pile", SmallBonePile::new);
     public static final RegistrySupplier<Block> LARGE_BONE_PILE = REGISTRY.register("large_bone_pile", LargeBonePile::new);
     public static final RegistrySupplier<Block> LARGE_BONE = REGISTRY.register("large_bone", LargeBone::new);
+    public static final RegistrySupplier<Block> BONE_MARROW = REGISTRY.register("bone_marrow", BoneMarrow::new);
 
     public static void register() {
         MythicNether.LOGGER.info("Registering Blocks");
