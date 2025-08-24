@@ -1,5 +1,6 @@
 package nl.eetgeenappels.mythic_nether.neoforge;
 
+import net.neoforged.bus.api.SubscribeEvent;
 import nl.eetgeenappels.mythic_nether.MythicNether;
 import net.neoforged.fml.common.Mod;
 

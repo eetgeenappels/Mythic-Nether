@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "mythic_nether:block/heavenly_vine" },
+    "facing=south": { "model": "mythic_nether:block/heavenly_vine", "y": 180 },
+    "facing=west":  { "model": "mythic_nether:block/heavenly_vine", "y": 270 },
+    "facing=east":  { "model": "mythic_nether:block/heavenly_vine", "y": 90 }
+  }
+}

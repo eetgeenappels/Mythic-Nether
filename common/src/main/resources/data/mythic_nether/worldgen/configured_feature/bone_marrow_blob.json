@@ -1,12 +1,12 @@
 {
-  "feature": "mythic_nether:giant_blob",
+  "type": "mythic_nether:giant_blob",
   "config": {
     "block": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
+      "type": "simple_state_provider",
+      "state":{
         "Name": "mythic_nether:bone_marrow"
       }
     },
-    "radius": 8
+    "radius": 6
   }
 }

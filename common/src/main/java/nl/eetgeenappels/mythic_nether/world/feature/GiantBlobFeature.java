@@ -2,15 +2,11 @@ package nl.eetgeenappels.mythic_nether.world.feature;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.Heightmap;
-
-import java.util.Random;
 
 public class GiantBlobFeature extends Feature<GiantBlobConfig> {
     public GiantBlobFeature(Codec<GiantBlobConfig> codec) {
@@ -20,29 +16,42 @@ public class GiantBlobFeature extends Feature<GiantBlobConfig> {
     @Override
     public boolean place(FeaturePlaceContext<GiantBlobConfig> context) {
         WorldGenLevel level = context.level();
-        BlockPos pos = context.origin();
+        BlockPos origin = context.origin();
         RandomSource random = context.random();
         GiantBlobConfig config = context.config();
 
-        // Find ground position
-        BlockPos ground = level.getHeightmapPos(Heightmap.Types.WORLD_SURFACE, pos);
-
+        // Find ground surface
+        BlockPos ground = level.getHeightmapPos(Heightmap.Types.WORLD_SURFACE, origin);
         int radius = config.radius();
+
+        BlockPos.MutableBlockPos placePos = new BlockPos.MutableBlockPos();
+
         for (int x = -radius; x <= radius; x++) {
-            for (int y = 0; y <= radius; y++) {
-                for (int z = -radius; z <= radius; z++) {
+            for (int z = -radius; z <= radius; z++) {
+                int localMaxY = getLocalMax(level, ground.offset(x, 0, z));
+                for (int y = -radius; y <= radius; y++) {
                     double dist = Math.sqrt(x * x + y * y + z * z);
                     if (dist <= radius) {
-                        BlockPos placePos =  new BlockPos(ground.getX(), getLocalMax(level, ground.offset(x, 0,y)), ground.getZ()).offset(x, y, z);
-                        level.setBlock(placePos, config.block().getState(random, placePos), 2);
+                        placePos.set(
+                                ground.getX() + x,
+                                localMaxY + 1 + y,
+                                ground.getZ() + z
+                        );
+
+                        // Optional: only place if we aren't replacing air/liquids
+                        if (level.getBlockState(placePos).isAir()) {
+                            level.setBlock(placePos, config.block().getState(random, placePos), 2);
+                        }
                     }
                 }
             }
         }
+
         return true;
     }
+
     public static int getLocalMax(WorldGenLevel world, BlockPos pos) {
-        int maxY = world.getMaxBuildHeight() - 1;
+        int maxY = 180;
         int max = maxY;
 
         for (int y = maxY; y >= 0; y--) {

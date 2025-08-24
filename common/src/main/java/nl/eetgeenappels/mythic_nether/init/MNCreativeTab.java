@@ -23,6 +23,7 @@ public class MNCreativeTab {
                 tabData.accept(MNItems.LARGE_BONE_PILE.get());
                 tabData.accept(MNItems.LARGE_BONE.get());
                 tabData.accept(MNItems.BONE_MARROW.get());
+                tabData.accept(MNItems.HEAVENLY_VINE.get());
             }).build());
 
     public static void register() {
