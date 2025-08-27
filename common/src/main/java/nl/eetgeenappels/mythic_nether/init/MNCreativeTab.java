@@ -24,6 +24,9 @@ public class MNCreativeTab {
                 tabData.accept(MNItems.LARGE_BONE.get());
                 tabData.accept(MNItems.BONE_MARROW.get());
                 tabData.accept(MNItems.HEAVENLY_VINE.get());
+                tabData.accept(MNItems.CYAN_DREAM_FLOWERS.get());
+                tabData.accept(MNItems.PINK_DREAM_FLOWERS.get());
+                tabData.accept(MNItems.DREAMY_NYLIUM.get());
             }).build());
 
     public static void register() {

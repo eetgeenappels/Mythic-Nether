@@ -12,6 +12,7 @@ public class MythicNetherFabricClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(MNBlocks.SCULK_LEAVES.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MNBlocks.BLACKSTONE_SHRUB.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(MNBlocks.SMALL_BONE_PILE.get(), RenderType.cutout());
 
         MythicNetherCommonClient.init();
     }

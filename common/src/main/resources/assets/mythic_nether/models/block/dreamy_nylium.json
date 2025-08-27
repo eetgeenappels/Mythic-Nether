@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mythic_nether:block/dreamy_nylium",
+    "up": "mythic_nether:block/dreamy_nylium",
+    "north": "mythic_nether:block/dreamy_nylium_side",
+    "east": "mythic_nether:block/dreamy_nylium_side",
+    "south": "mythic_nether:block/dreamy_nylium_side",
+    "west": "mythic_nether:block/dreamy_nylium_side",
+    "particle": "mythic_nether:block/dreamy_nylium_side"
+  },
+  "render_type": "solid"
+}

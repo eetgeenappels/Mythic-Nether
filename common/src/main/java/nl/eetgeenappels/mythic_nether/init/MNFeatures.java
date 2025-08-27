@@ -18,6 +18,5 @@ public class MNFeatures {
 
     public static void init() {
         FEATURES.register();
-        
     }
 }

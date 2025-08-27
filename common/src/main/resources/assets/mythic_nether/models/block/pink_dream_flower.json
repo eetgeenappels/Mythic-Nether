@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "mythic_nether:block/pink_dream_flower",
+    "particle": "mythic_nether:block/pink_dream_flower"
+  }
+}

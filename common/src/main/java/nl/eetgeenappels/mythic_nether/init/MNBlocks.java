@@ -3,6 +3,7 @@ package nl.eetgeenappels.mythic_nether.init;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import nl.eetgeenappels.mythic_nether.MythicNether;
 import nl.eetgeenappels.mythic_nether.blocks.*;
@@ -19,6 +20,9 @@ public class MNBlocks {
     public static final RegistrySupplier<Block> LARGE_BONE = REGISTRY.register("large_bone", LargeBone::new);
     public static final RegistrySupplier<Block> BONE_MARROW = REGISTRY.register("bone_marrow", BoneMarrow::new);
     public static final RegistrySupplier<Block> HEAVENLY_VINE = REGISTRY.register("heavenly_vine", HeavenlyVine::new);
+    public static final RegistrySupplier<Block> CYAN_DREAM_FLOWER = REGISTRY.register("cyan_dream_flower", DreamFlower::new);
+    public static final RegistrySupplier<Block> PINK_DREAM_FLOWER = REGISTRY.register("pink_dream_flower", DreamFlower::new);
+    public static final RegistrySupplier<Block> DREAMY_NYLIUM = REGISTRY.register("dreamy_nylium", DreamyNylium::new);
 
     public static void register() {
         MythicNether.LOGGER.info("Registering Blocks");

@@ -1,6 +1,6 @@
 package nl.eetgeenappels.mythic_nether.blocks;
 
-import com.google.common.collect.ImmutableMap;
+
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
@@ -20,35 +20,33 @@ import nl.eetgeenappels.mythic_nether.MythicNether;
 import nl.eetgeenappels.mythic_nether.init.MNBlocks;
 import org.jetbrains.annotations.NotNull;
 
-import java.awt.*;
-import java.util.function.Function;
-
-public class SmallBonePile extends BushBlock {
+public class DreamFlower extends BushBlock {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FEATURE =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(MythicNether.MOD_ID, "boney_foliage"));
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(MythicNether.MOD_ID, "dreamy_foliage"));
 
-    public static final MapCodec<SmallBonePile> CODEC = RecordCodecBuilder.mapCodec(
+    public static final MapCodec<DreamFlower> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(
                     propertiesCodec()
-            ).apply(instance, SmallBonePile::new)
+            ).apply(instance, DreamFlower::new)
     );
+
+    private final ResourceKey<ConfiguredFeature<?, ?>> feature;
 
     private static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D,
             16.0D, 5.0D, 16.0D);
 
-    private final ResourceKey<ConfiguredFeature<?, ?>> feature;
-
-    public SmallBonePile(Properties properties) {
-        super(properties);
-        this.feature = FEATURE;
-    }
-
-    public SmallBonePile() {
-        this(BlockBehaviour.Properties.of()
+    public DreamFlower() {
+        super(BlockBehaviour.Properties.of()
                 .sound(SoundType.BONE_BLOCK)
                 .dynamicShape()
                 .noOcclusion()
                 .noCollission());
+        feature = FEATURE;
+    }
+
+    protected DreamFlower(Properties properties) {
+        super(properties);
+        feature = FEATURE;
     }
 
     @Override

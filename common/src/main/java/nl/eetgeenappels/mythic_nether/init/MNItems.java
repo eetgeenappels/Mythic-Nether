@@ -20,6 +20,9 @@ public class MNItems {
     public static final RegistrySupplier<Item> LARGE_BONE = block(MNBlocks.LARGE_BONE);
     public static final RegistrySupplier<Item> BONE_MARROW = block(MNBlocks.BONE_MARROW);
     public static final RegistrySupplier<Item> HEAVENLY_VINE = block(MNBlocks.HEAVENLY_VINE);
+    public static final RegistrySupplier<Item> PINK_DREAM_FLOWERS = block(MNBlocks.PINK_DREAM_FLOWER);
+    public static final RegistrySupplier<Item> CYAN_DREAM_FLOWERS = block(MNBlocks.CYAN_DREAM_FLOWER);
+    public static final RegistrySupplier<Item> DREAMY_NYLIUM = block(MNBlocks.DREAMY_NYLIUM);
 
     private static RegistrySupplier<Item> block(RegistrySupplier<Block> block) {
         return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
