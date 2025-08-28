@@ -23,6 +23,8 @@ public class MNBlocks {
     public static final RegistrySupplier<Block> CYAN_DREAM_FLOWER = REGISTRY.register("cyan_dream_flower", DreamFlower::new);
     public static final RegistrySupplier<Block> PINK_DREAM_FLOWER = REGISTRY.register("pink_dream_flower", DreamFlower::new);
     public static final RegistrySupplier<Block> DREAMY_NYLIUM = REGISTRY.register("dreamy_nylium", DreamyNylium::new);
+    public static final RegistrySupplier<Block> BLUE_HEAVENLY_NYLIUM = REGISTRY.register("blue_heavenly_nylium", BlueHeavenlyNylium::new);
+    public static final RegistrySupplier<Block> PINK_HEAVENLY_NYLIUM = REGISTRY.register("pink_heavenly_nylium", PinkHeavenlyNylium::new);
 
     public static void register() {
         MythicNether.LOGGER.info("Registering Blocks");

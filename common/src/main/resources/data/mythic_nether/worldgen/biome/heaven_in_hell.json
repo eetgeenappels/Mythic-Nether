@@ -1,0 +1,29 @@
+{
+  "temperature": 1,
+  "downfall": 1,
+  "has_precipitation": false,
+  "temperature_modifier": "none",
+  "effects": {
+    "sky_color": 6316128,
+    "fog_color": 8026746,
+    "water_color": 12632256,
+    "water_fog_color": 8026746,
+    "grass_color": 14079702,
+    "foliage_color": 9605778,
+    "grass_color_modifier": "none",
+    "ambient_sound": "minecraft:ambient.crimson_forest.loop"
+  },
+  "spawners": {
+    "monster": [
+    ],
+    "creature": [
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [
+    ],
+    []
+  ]
+}

@@ -10,7 +10,7 @@
           "type": "minecraft:interpolated",
           "argument": {
             "type": "minecraft:noise",
-            "noise": "minecraft:aquifer_barrier",
+            "noise": "minecraft:continentalness",
             "xz_scale": 0.5,
             "y_scale": 0
           }

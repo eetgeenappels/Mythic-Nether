@@ -56,7 +56,7 @@ public class BlackstoneShrub extends BushBlock {
 
     @Override
     protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
-        return blockState.getBlock() == Blocks.BLACKSTONE;
+        return blockState.is(Blocks.BLACKSTONE);
     }
 
     @Override

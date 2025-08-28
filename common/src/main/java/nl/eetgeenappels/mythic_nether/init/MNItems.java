@@ -23,6 +23,8 @@ public class MNItems {
     public static final RegistrySupplier<Item> PINK_DREAM_FLOWERS = block(MNBlocks.PINK_DREAM_FLOWER);
     public static final RegistrySupplier<Item> CYAN_DREAM_FLOWERS = block(MNBlocks.CYAN_DREAM_FLOWER);
     public static final RegistrySupplier<Item> DREAMY_NYLIUM = block(MNBlocks.DREAMY_NYLIUM);
+    public static final RegistrySupplier<Item> BLUE_HEAVENLY_NYLIUM = block(MNBlocks.BLUE_HEAVENLY_NYLIUM);
+    public static final RegistrySupplier<Item> PINK_HEAVENLY_NYLIUM = block(MNBlocks.PINK_HEAVENLY_NYLIUM);
 
     private static RegistrySupplier<Item> block(RegistrySupplier<Block> block) {
         return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

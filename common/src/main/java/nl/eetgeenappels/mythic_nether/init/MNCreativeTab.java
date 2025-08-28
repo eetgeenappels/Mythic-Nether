@@ -27,6 +27,8 @@ public class MNCreativeTab {
                 tabData.accept(MNItems.CYAN_DREAM_FLOWERS.get());
                 tabData.accept(MNItems.PINK_DREAM_FLOWERS.get());
                 tabData.accept(MNItems.DREAMY_NYLIUM.get());
+                tabData.accept(MNItems.BLUE_HEAVENLY_NYLIUM.get());
+                tabData.accept(MNItems.PINK_HEAVENLY_NYLIUM.get());
             }).build());
 
     public static void register() {

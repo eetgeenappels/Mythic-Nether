@@ -64,6 +64,18 @@
             "depth": 0,
             "offset": 0
           }
+        },
+        {
+          "biome": "mythic_nether:heaven_in_hell",
+          "parameters": {
+            "temperature": 1,
+            "humidity": 1,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
         }
       ]
     },
@@ -302,6 +314,56 @@
                                     "type": "minecraft:block",
                                     "result_state": {
                                       "Name": "minecraft:warped_nylium"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:biome",
+                          "biome_is": [
+                            "mythic_nether:heaven_in_hell"
+                          ]
+                        },
+                        "then_run": {
+                          "type": "minecraft:sequence",
+                          "sequence": [
+                            {
+                              "type": "minecraft:condition",
+                              "if_true": {
+                                "type": "minecraft:stone_depth",
+                                "offset": 0,
+                                "surface_type": "floor",
+                                "add_surface_depth": false,
+                                "secondary_depth_range": 1
+                              },
+                              "then_run": {
+                                "type": "minecraft:sequence",
+                                "sequence": [
+                                  {
+                                    "type": "minecraft:condition",
+                                    "if_true": {
+                                      "type": "minecraft:noise_threshold",
+                                      "noise": "mythic_nether:warped_crimson_floor",
+                                      "min_threshold": -1,
+                                      "max_threshold": 0
+                                    },
+                                    "then_run": {
+                                      "type": "minecraft:block",
+                                      "result_state": {
+                                        "Name": "mythic_nether:pink_heavenly_nylium"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "minecraft:block",
+                                    "result_state": {
+                                      "Name": "mythic_nether:blue_heavenly_nylium"
                                     }
                                   }
                                 ]
